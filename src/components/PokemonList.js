@@ -6,6 +6,7 @@ class PokemonList extends Component {
 
     render() {
         const { handleOnClick } = this.props;
+
         const pokemon = pokeClasses.map(pokeClass => {
             return (
                 <Pokemon
@@ -19,6 +20,7 @@ class PokemonList extends Component {
             <section className="poke-list">
                 {pokemon}
             </section>
+            
         );
     }
 }

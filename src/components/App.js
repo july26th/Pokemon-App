@@ -25,14 +25,17 @@ class App extends Component {
          //console.log(pokemon.stats);
       })
       .catch(err => console.log(err));
-  }
+  } 
 
   render() {
+    const { keyword } = this.state;
     return (
       <div className="App">
         <div className="container poke-box">
         <img width="380" height="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png"/>
-    
+      
+        <input name="" id=""  value={keyword} onChange={this.onChange} 
+         className="btn btn-primary" type="text"  />
         <div className=" layout">
     
         <PokemonList handleOnClick={this.handleOnClick}/>
