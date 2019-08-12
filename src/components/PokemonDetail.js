@@ -25,13 +25,14 @@ class PokemonDetail extends Component {
 
     render() {
         const { pokemon } = this.props;
+        
         var color = [];
         var { id, name, sprite, height, types, weight, hp, attack, defense, speed } = pokemon;
         if (types) {
             types.map((type, index) => {
                 color.push(type.type.name);
             });
-        }
+        }if(pokemon.id) { 
         return (
             <section className="detail-view">
                 <div className='sprite-box' style={color.length === 2 ?
@@ -56,7 +57,7 @@ class PokemonDetail extends Component {
                         <p className='data-name flex-16'>HP:</p>
                         <div className="progress">
                             <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow={hp}
-                                aria-valuemin="0" aria-valuemax="100" style={{ width: `${hp}%` }}>
+                                aria-valuemin="0" aria-valuemax="200" style={{ width: `${hp/2}%` }}>
                                 <p className='info-name'>{hp}</p>
                             </div>
                         </div>
@@ -65,14 +66,36 @@ class PokemonDetail extends Component {
                         <p className='data-name flex-16'>Attack:</p>
                         <div className="progress">
                             <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow={attack}
-                                aria-valuemin="0" aria-valuemax="100" style={{ width: `${attack}%` }}>
+                                aria-valuemin="0" aria-valuemax="200" style={{ width: `${attack/2}%` }}>
                                 <p className='info-name'>{attack}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="info">
+                        <p className='data-name flex-16'>Speed:</p>
+                        <div className="progress">
+                            <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow={speed}
+                                aria-valuemin="0" aria-valuemax="200" style={{ width: `${speed/2}%` }}>
+                                <p className='info-name'>{speed}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         );
+                }
+                else return (
+                    <section className="detail-view">
+                    <div className='sprite-box'  >
+                        <img src='https://sickr.files.wordpress.com/2013/09/pokeball.png' className='sprite-image' alt="sprite" />
+                        <h3 className='sprite-name'>Pokedex</h3>
+                    </div>
+                    <div className='data-wrapper'>
+                      
+                    </div>
+                </section>
+            );
+                
     }
 }
 
