@@ -3,6 +3,7 @@ class GetPokemon {
       this.id = data.id;
       this.name = data.name;
       this.sprite = data.sprites.front_default;
+      this.backSprite = data.sprites.back_default;
       this.types = data.types;
       this.height = data.height;
       this.weight = data.weight;

@@ -1,81 +1,41 @@
 import React, { Component } from 'react';
-import PokemonList from './PokemonList';
-import PokemonDetail from './PokemonDetail';
-import GetPokemon from '../GetPokemon';
+import {Switch, Route} from 'react-router-dom';
+import Pokedex from './Pokedex/Pokedex';
+import GameOption from './MemoryCard/GameOption';
+import Game from './MemoryCard/Game';
+import Default from './Default';
 import SlideBar from './SlideBar';
-import Search from './Search';
-import pokemon from 'pokemon';
-import { pokeClasses } from '../pokeClasses';
+
 import './styles/App.css';
 
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      pokemon: {},
-      pokeList: [],
-    };
-  }
-  componentDidMount() {
-    this.setProducts();
-   
-  }
-  setProducts = (name) => {
-    let temp = [];
-    pokeClasses.forEach(item => {
-      const singleItem = { ...item };
-      temp = [...temp, singleItem];
-    });
-    this.setState(() => {
-      return { pokeList: temp };
-    });
-  };
-  handleOnClick = (id) => {
-    fetch(`http://pokeapi.co/api/v2/pokemon/${id}`)
-      .then(res => res.json())
-      .then(data => {
-        const pokemon = new GetPokemon(data);
-        this.setState({
-          pokemon
-        });
-      })
-      .catch(err => console.log(err));
-  }
-  onSearch = (keyword) => {
-      let temp = [];
-      var findPoke = this.state.pokeList.find(key => {
-        try {
-          return pokemon.getId(keyword).toString() === key.id;
-        } catch (error) {
-          return temp = this.state.pokeList;
-        }        
-      });
-      if(findPoke) {
-        temp[0] = findPoke;
-        this.setState({
-          pokeList: temp
-        });
-      }
-    //   if(pokemon.getId(keyword)
-    // } catch (error) {
-    //   console.log('hi');
-    // }
-  }
+ 
+
+  // static duplicateCard = () => {
+  //   let tempArr = [];
+  //   for (let i = 0; i < 10; i++) {
+  //     var item = pokeClasses[Math.floor(Math.random() * pokeClasses.length)];
+  //     tempArr.push(item);
+  //   }
+  //   return tempArr.reduce((preValue, current, index, array) => {
+  //     return preValue.concat([current, current])
+  //   }, []);
+  // };
+
+
   render() {
-    const { pokeList } = this.state;
     return (
-      <div className="App">
-       <SlideBar />
-        <div className="container poke-box">
-          <img width="380" height="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" />
-          <Search onSearch = {this.onSearch} />
-          <div className=" layout">
-            <PokemonList pokeList = {pokeList} handleOnClick={this.handleOnClick} />
-            <PokemonDetail pokemon={this.state.pokemon} />
-          </div>
-        </div>
-      </div>
+      <React.Fragment>
+             <SlideBar />
+      <Switch>
+        <Route path="/" exact component={Pokedex} />
+        <Route path="/pokedex" component={Pokedex} />
+        <Route path="/gameoption" component={GameOption} />
+        <Route path="/game" component={Game} />
+        <Route component={Default} />
+      </Switch>
+    </React.Fragment>
     );
   }
 }

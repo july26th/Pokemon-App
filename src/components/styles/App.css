@@ -6,7 +6,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Avenir Next', sans-serif;
+  font-family: 'Permanent Marker', cursive;
+  background-image: url('https://images5.alphacoders.com/675/675272.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 
@@ -22,10 +27,10 @@ p {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 600px;
+  height: 630px;
   padding: 20px;
   margin: 10px auto;
-  background-color: #ec4f4f;
+  background-color: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   box-shadow: 0 14px 45px rgba(0, 0, 0, 0.22), 0 18px 45px rgba(0, 0, 0, 0.22);
 }
@@ -39,13 +44,13 @@ p {
 .poke-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 50%;
   height: 90%;
   padding: 10px;
   margin-right: 10px;
-  background-color: #a7f7d5e3;
+  background-color: rgba(33, 33, 33, 0.4);
   box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: scroll;
 }
@@ -64,7 +69,7 @@ p {
 .detail-view {
   width: 50%;
   height: 90%;
-  background-color: #ec4f4f;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
 }
@@ -74,11 +79,11 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 65%;
+  width: 60%;
   height: 240px;
-  margin: 0px auto 10px auto;
+  margin: 0px auto 0.6rem auto;
   background-color: #f97b7b;
-  border: 15px solid #FFF;
+  border: 0.7rem solid #FFF;
   border-radius: 5px;
   color: #585858;
 }
@@ -122,12 +127,13 @@ p {
 }
 .info p {
   margin-right: 20px;
+  margin-top: 4px;
 }
 .flex-16 {
   flex-basis: 16%;
 }
 .progress {
-  height: 34px;
+  height: 28px;
   flex-basis: 76%;
 }
 .progress-bar {
@@ -174,11 +180,130 @@ p {
   display: flex;
   flex-direction: column;
 }
-.input-group.md-form.form-sm.form-1 input{
-  border: 1px solid #bdbdbd;
-border-top-right-radius: 0.25rem;
-border-bottom-right-radius: 0.25rem;
-}
+
+
 .input-group.md-form.form-sm.form-1 input.red-border {
   border: 1px solid #ef9a9a;
+  }
+  .flip-box {
+    background-color: transparent;
+    width: 300px;
+    height: 200px;
+    perspective: 1000px; 
+  }
+  
+  .flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-box-inner:hover, .flip-box-back:hover {
+    cursor: pointer;
+  }
+  .flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+    .flip-box-back {
+
+    transform: rotateY(180deg);
+  }
+
+
+
+
+
+
+
+  .grid-container {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: auto auto auto auto;
+    padding: 10px 150px 10px 150px;
+  }
+  
+  .grid-header-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #c9d1f5;
+    padding: 10px;
+  }
+  
+  .grid-item {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+  
+  .justify-left {
+    text-align: left
+  }
+  
+  .justify-end {
+    text-align: right;
+  }
+  
+  .justify-center {
+    text-align: center;
+  }
+  
+  .timer {
+    color: #5168e9;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .restart-button {
+    width: 15em;
+    height: 3em;
+    color: white;
+    background-color: #5168e9;
+    border: 0;
+  }
+  
+  .game-status-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(24, 21, 16);
+    font-weight: bold;
+  }
+  
+  .card {
+    width: 100%;
+    height: 10em;
+    background-color: rgb(75, 42, 165);
+    color: white;
+    font-size: 15px;
+  }
+  
+  .hide-card {
+    visibility: hidden;
+  }
+  
+  .card-front {
+    background-color: #999999;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+    height: 100px !important;
+  }
+  
+  .card-back {
+    height: 100px !important;
+    font-weight: bold;
+  }
+  
+  .react-card-front {
+    position: unset !important;
+    height: 100px !important;
+  }
+  .react-card-back {
+    height: 100px !important;
+  }
+  .react-card-flip {
+    height: 100px !important;
   }

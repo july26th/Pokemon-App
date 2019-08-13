@@ -21,7 +21,7 @@ class SlideBar extends Component {
                     <div className="col-md-6">
                          <div className="input-group mt-3">
                                 <input type="text" value={this.state.keyword} onChange={this.onChange} 
-                                 className="form-control" placeholder="Search" />
+                                 className="form-control" placeholder="Enter Pokemon name ..." />
                                 <div className="input-group-append">
                                     <button  onClick={this.onSearch} className="btn btn-success" type="submit">Search</button>
                                 </div>

@@ -1,5 +1,5 @@
 import React, { Component} from "react";
-import sprites from './../sprites.png';
+import sprites from './sprites.png';
 
 class Pokemon extends Component {
  
