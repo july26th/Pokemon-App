@@ -62,7 +62,7 @@ class Pokedex extends Component {
             <div className="container poke-box">
 
 
-                <img width="380" height="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" />
+               {/* <img width="380" height="60" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" /> */}
                 <Search onSearch={this.onSearch} />
                 <div className=" layout">
                     <PokemonList pokeList={this.state.pokeList} handleOnClick={this.handleOnClick} />

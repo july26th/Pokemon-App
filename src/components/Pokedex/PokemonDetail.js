@@ -27,7 +27,7 @@ class PokemonDetail extends Component {
         const { pokemon } = this.props;
 
         var color = [];
-        var { id, name, sprite, height, types, weight, hp, attack, backSprite, speed } = pokemon;
+        var { id, name, sprite, height, types, weight, hp, attack, backSprite, speed, defense } = pokemon;
         if (types) {
             types.map((type, index) => {
                 color.push(type.type.name);
@@ -66,7 +66,7 @@ class PokemonDetail extends Component {
                             <p className='data-name'>Weight: {weight / 10} kg</p>
                         </div>
                         <div className="info">
-                            <p className='data-name flex-16'>HP:</p>
+                            <p className='data-name flex-22'>HP:</p>
                             <div className="progress">
                                 <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow={hp}
                                     aria-valuemin="0" aria-valuemax="200" style={{ width: `${hp / 2}%` }}>
@@ -75,7 +75,7 @@ class PokemonDetail extends Component {
                             </div>
                         </div>
                         <div className="info">
-                            <p className='data-name flex-16'>Attack:</p>
+                            <p className='data-name flex-22'>Attack:</p>
                             <div className="progress">
                                 <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow={attack}
                                     aria-valuemin="0" aria-valuemax="200" style={{ width: `${attack / 2}%` }}>
@@ -84,11 +84,20 @@ class PokemonDetail extends Component {
                             </div>
                         </div>
                         <div className="info">
-                            <p className='data-name flex-16'>Speed:</p>
+                            <p className='data-name flex-22'>Speed:</p>
                             <div className="progress">
                                 <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow={speed}
                                     aria-valuemin="0" aria-valuemax="200" style={{ width: `${speed / 2}%` }}>
                                     <p className='info-name'>{speed}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="info">
+                            <p className='data-name flex-22'>Defense:</p>
+                            <div className="progress">
+                                <div className="progress-bar progress-bar-success" role="progressbar" aria-valuenow={defense}
+                                    aria-valuemin="0" aria-valuemax="200" style={{ width: `${defense / 2}%` }}>
+                                    <p className='info-name'>{defense}</p>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +112,12 @@ class PokemonDetail extends Component {
                     <h3 className='sprite-name'>Pokedex</h3>
                 </div>
                 <div className='data-wrapper'>
-
+                    <div className="info-box">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                <h3 className='data-name'>The Pokédex is designed to catalog and provide information on various species of Pokémon 
+                    featured in the Pokémon video games, anime and manga series. </h3>
+                   <h3 className='data-name'>This site only provides Pokédex about first 151 pokemon in 1st Generation.</h3>
+                </div>
                 </div>
             </section>
         );

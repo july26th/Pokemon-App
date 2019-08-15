@@ -21,7 +21,7 @@ class CardView extends Component {
       imPath = imPath + 'back.jpg';
     }
 
-    let className='Card';
+    let className='poke-card';
     if (this.props.matched) {
       className = className + ' Matched';
     }

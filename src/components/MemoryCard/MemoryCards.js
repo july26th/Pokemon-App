@@ -3,7 +3,8 @@ import shuffle from 'shuffle-array';
 class MemoryCards {
   constructor() {
     this.cards = [];
-    this.NUM_IMAGES = 10;
+    
+    this.NUM_IMAGES = 15;
   }
 
   generateCardSet(num) {
@@ -13,7 +14,7 @@ class MemoryCards {
     this.cards = [];
     let id=1;
     for(let i=1; i <= num; i++) {
-      var randomPKM = Math.floor(1 + Math.random() * 151);
+      var randomPKM = Math.floor(1 + Math.random() * 150);
       let card1 = {
         id: id,
         image : randomPKM,

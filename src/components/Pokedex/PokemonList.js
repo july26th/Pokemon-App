@@ -4,7 +4,6 @@ class PokemonList extends Component {
     
     render() {
         const { handleOnClick, pokeList } = this.props;
-        console.log(pokeList);
         const pokemon = pokeList.map(pokeClass => {
             return (
                 <Pokemon
