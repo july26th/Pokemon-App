@@ -175,7 +175,7 @@ p {
 .sidebar {
   position: fixed;
   left: 0;
-  top: 35%;
+  top: 30%;
   cursor: pointer;
   z-index: 100;
   display: flex;

@@ -5,6 +5,8 @@ import PokeNews from './PokemonTV/PokeNews';
 import GameOption from './MemoryCard/GameOption';
 import Game from './MemoryCard/Game';
 import PokeTV from './PokemonTV/PokeTV';
+import PokeSeries from './PokemonTV/PokeSeries';
+import PokeMovies from './PokemonTV/PokeMovies';
 import Default from './Default';
 import SlideBar from './SlideBar';
 
@@ -36,6 +38,8 @@ class App extends Component {
           <Route path="/gameoption" component={GameOption} />
           <Route path="/game" component={Game} />
           <Route path="/pokenews" component={PokeNews} />
+          <Route path="/pokeseries" component={PokeSeries} />
+          <Route path="/pokemovies" component={PokeMovies} />
           <Route component={Default} />
         </Switch>
       </React.Fragment>

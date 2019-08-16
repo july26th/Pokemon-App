@@ -11,11 +11,11 @@ class PokeTV extends Component {
 
         return (
             <div className="container poke-box">
-                {/* <iframe width="720" height="450" src="https://www.youtube.com/embed/?listType=playlist&list=PLdhrcCVXurgIVbQnCSn-Ilp_cpoTJVWVq" frameborder="0" allowfullscreen></iframe> */}
+             
                 <div className="row" width="100%" height="100%">
                     <div className="col-md-7">
                         <Link to='/pokenews'>
-                        <div className="poketv-box">
+                        <div className="poketv-box shake">
                             <img src={bigImg} className="big-image" alt='' />
                             <div className="box-info black-box">
                                 <h3 className="">A New Look for Pokemon TV</h3>
@@ -25,16 +25,16 @@ class PokeTV extends Component {
                         </Link>
                     </div>
                     <div className="col-md-5">
-                    <Link to='/'>
-                        <div className="poketv-box d-flex flex-row">
+                    <Link to='/pokemovies'>
+                        <div className="poketv-box shake d-flex flex-row">
                             <img src={mediumImg1} className="medium-image" alt='' />
                             <div className="box-info box-red">
                                 <h3 className="">Watch Pokemon Movies Online</h3>
                             </div>
                         </div>
                         </Link>
-                        <Link to='/'>
-                        <div className="poketv-box d-flex flex-row">
+                        <Link to='/pokeseries'>
+                        <div className="poketv-box shake d-flex flex-row">
                             <div className="box-info box-orange">
                                 <h3 className="pl-3">Watch New Episodes of Pokemon the Series Online</h3>
                             </div>
