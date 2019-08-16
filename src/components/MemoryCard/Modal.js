@@ -11,7 +11,7 @@ class Modal extends Component {
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-body">
-                <img src="https://media1.tenor.com/images/7d94cd074b11ad663338c33ad329787b/tenor.gif?itemid=7453669" />
+                <img alt='' src="https://media1.tenor.com/images/7d94cd074b11ad663338c33ad329787b/tenor.gif?itemid=7453669" />
           
                 </div>
               </div>

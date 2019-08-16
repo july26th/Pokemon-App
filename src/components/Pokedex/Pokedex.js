@@ -44,7 +44,6 @@ class Pokedex extends Component {
             .catch(err => console.log(err));
     }
     onSearch = (keyword) => {
-        let temp = [];
         if (keyword) {
             var findPoke = this.state.pokeList.filter(key => {
                 return key.name.toLowerCase().includes(keyword.toLowerCase());

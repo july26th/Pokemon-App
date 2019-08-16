@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
 import pokeApp from './Image/4.jpg';
 import './PokeTV.css';
 class PokeNews extends Component {
@@ -28,7 +27,7 @@ class PokeNews extends Component {
                             The apps for Roku, Apple TV, Amazon Fire TV, and select smart TVs will be updated soon.
                             </p>
                             <div className="d-flex justify-content-center m-4">
-                            <img className="shake img-shake" src={pokeApp} />
+                            <img alt='' className="shake img-shake" src={pokeApp} />
                             </div>
                             <p>
                             If you're heading somewhere without a reliable internet connection, you can download an episode, movie, or feature for offline viewing. 

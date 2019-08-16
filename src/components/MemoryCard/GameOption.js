@@ -12,7 +12,7 @@ class GameOption extends Component {
 
         return (
             <div className='container poke-box'>
-                <img src={gameTitle} />
+                <img src={gameTitle} alt=''/>
                 <div className="mode">
                     <div class="ih-item square colored effect6 from_top_and_bottom">
                         <Link to={{ pathname: '/game', state: { mode: 'easy' } }}>

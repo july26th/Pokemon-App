@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
 import './PokeTV.css';
 import series1 from './Image/6.jpg';
 import series2 from './Image/7.jpg';
-import tip from './Image/tip.jpg';
-import list from './Image/list.jpg';
+// import tip from './Image/tip.jpg';
+// import list from './Image/list.jpg';
 class PokeSeries extends Component {
     constructor() {
         super();
@@ -40,7 +39,7 @@ class PokeSeries extends Component {
                     <div className="col-md-8">
                         {watchList}
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 d-flex flex-column justify-content-center align-items-center">
                         <div className="d-flex flex-row series-box" onClick={() => this.onClick(1)}>
                             <div className="series-1" style={{ backgroundImage: "url(" + series1 + ")" }}>
                                 <p className="overlay">

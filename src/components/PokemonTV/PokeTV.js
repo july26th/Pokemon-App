@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PokeNews from './PokeNews';
 import bigImg from './Image/1.jpg';
 import { Link } from 'react-router-dom';
 import './PokeTV.css';

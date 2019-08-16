@@ -28,7 +28,7 @@ class PokeMovies extends Component {
 
                 <div className="row" width="100%" height="100%">
                     <div className="col-md-8 d-flex justify-content-center align-items-center ">
-                        <iframe className="video" src={link} width="650" height="450" scrolling="no" frameBorder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+                        <iframe className="video" src={link} width="650" height="450" scrolling="no" frameBorder="0" allowFullScreen={true}></iframe>
                     </div>
                     <div className="col-md-4">
                         <h2 className="title text-uppercase">Movies List</h2>

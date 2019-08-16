@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Game.css';
 import CardView from './CardView';
 import MemoryCards from './MemoryCards';
-import { Redirect } from 'react-router-dom'
 import Modal from './Modal';
 class Game extends Component {
     constructor(props) {

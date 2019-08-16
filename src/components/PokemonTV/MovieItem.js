@@ -9,7 +9,7 @@ class MovieItem extends Component {
         return (
                            <div className="d-flex flex-row movie-item" onClick={() => this.onClick(item.link)}>
                                 <div className="movie-img" >
-                                    <img className="" src={item.img} />
+                                    <img className="" src={item.img} alt='' />
                                 <p className="overlay">
                                     <i className="fa fa-play-circle" aria-hidden="true"></i>
                                 </p>

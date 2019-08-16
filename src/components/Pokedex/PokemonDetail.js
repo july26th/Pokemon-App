@@ -6,7 +6,7 @@ const TYPE_COLORS = {
     dragon: '755EDF',
     electric: 'FCBC17',
     fairy: 'F4B1F4',
-    fighting: '823551D',
+    fighting: 'C03028',
     fire: 'E73B0C',
     flying: 'A3B3F7',
     ghost: '6060B2',
@@ -22,15 +22,15 @@ const TYPE_COLORS = {
 };
 
 class PokemonDetail extends Component {
-
+    
     render() {
         const { pokemon } = this.props;
 
         var color = [];
-        var { id, name, sprite, height, types, weight, hp, attack, backSprite, speed, defense } = pokemon;
+        var { name, sprite, height, types, weight, hp, attack, backSprite, speed, defense } = pokemon;
         if (types) {
-            types.map((type, index) => {
-                color.push(type.type.name);
+            types.map((type) => {
+               return color.push(type.type.name);
             });
         } if (pokemon.id) {
             return (
@@ -40,12 +40,12 @@ class PokemonDetail extends Component {
                     { background: `linear-gradient(90deg, #${TYPE_COLORS[color[0]]} 50%, #${TYPE_COLORS[color[1]]} 50%)` }
                     : { background: `#${TYPE_COLORS[color[0]]}` }
                 } >
-                    <div class="flip-box">
-                        <div class="flip-box-inner">
-                            <div class="flip-box-front">
+                    <div className="flip-box">
+                        <div className="flip-box-inner">
+                            <div className="flip-box-front">
                             <img src={sprite} className='sprite-image' alt="sprite" />
                             </div>
-                            <div class="flip-box-back">
+                            <div className="flip-box-back">
                             <img src={backSprite} className='sprite-image' alt="sprite" />
                             </div>
                         </div>
@@ -56,6 +56,7 @@ class PokemonDetail extends Component {
                        
                     <div className='data-wrapper'>
                         <p className="data-name">Type: {types ? (types.map((type, index) => {
+                            console.log(TYPE_COLORS[type.type.name]);
                             return <span key={index} style={{
                                 backgroundColor: `#${TYPE_COLORS[type.type.name]}`,
                                 color: 'white'
@@ -113,7 +114,7 @@ class PokemonDetail extends Component {
                 </div>
                 <div className='data-wrapper'>
                     <div className="info-box">
-                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <i className="fa fa-info-circle" aria-hidden="true"></i>
                 <h3 className='data-name'>The Pokédex is designed to catalog and provide information on various species of Pokémon 
                     featured in the Pokémon video games, anime and manga series. </h3>
                    <h3 className='data-name'>This site only provides Pokédex about first 151 pokemon in 1st Generation.</h3>
